@@ -1,24 +1,22 @@
 [package]
-name = "rust_quickstart"
+name = "rust_rest_api_boilerplate"
 version = "0.1.0"
 edition = "2021"
+authors = ["Tanvir <aunjum.uxbd@gmail.com> Aunjum"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-
-tokio = "1"
-mongodb = {version = "2.1", default-features = false, features = ["tokio-runtime"]}
-
-# async-std = "1"
-# mongodb = {version = "2.1", default-features = false, features = ["async-std-runtime"]}
-
-bson = { version = "2", features = ["chrono-0_4"] } # Needed for using chrono datetime in doc
-
-chrono = "0.4" # Used for setting DateTimes
-
-serde = "1" # Used in the Map Data into Structs section
-
-rocket = {version = "0.5.0-rc.2", features = ["json"]}
-
-dotenv = "0.15.0"
+mongodb = { version = "2.2.1", default-features = false, features = ["async-std-runtime"]}
+rocket = { version = "0.5.0-rc.2", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+bcrypt = "0.13.0"
+chrono = "0.4.19"
+jsonwebtoken = "8.1.0"
+rand_core = { version = "0.6", features = ["std"] }
+base64 = "0.13.0"
+regex = "1.5.6"
+rocket_cors = { git = "https://github.com/lawliet89/rocket_cors", branch = "master" }
+schemars = "0.8.10"
+okapi = { version = "0.7.0-rc.1" }
+rocket_okapi = { version = "0.8.0-rc.2", features = ["swagger"] }

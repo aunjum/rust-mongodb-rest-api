@@ -1,0 +1,29 @@
+GET http://127.0.0.1:8000/api/v1/public/hello HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/api/v1/private/hello HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/api/v1/user HTTP/1.1
+
+###
+POST http://127.0.0.1:8000/api/v1/refresh-token HTTP/1.1
+
+{
+    "refresh_token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNjMyYzIwMjUyM2MxM2I3MzI2ZWNlZmIxIiwiZXhwIjoxNjY2NDI4MTk3fQ.cESmh0Dj9e7J4AyMH80OWV2LIfp04Yd9UQsi6i198QA"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/registration HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "login": "aunjum",
+    "password": "Anoop1234",
+    "mail": "aunjum.uxbd@gmail.com",
+    "first_name": "Tanvir",
+    "last_name": "Aunjum"
+}
